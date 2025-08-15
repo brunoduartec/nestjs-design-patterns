@@ -1,0 +1,476 @@
+type: collection.insomnia.rest/5.0
+name: nestjs-design-patterns
+meta:
+  id: wrk_f57b508cd64042e59fb05f3b7deb1299
+  created: 1736967348396
+  modified: 1736967348396
+  description: ""
+collection:
+  - name: Design Patterns
+    meta:
+      id: fld_1aaa454b1d6a45168b01394bfedcb4a6
+      created: 1746379776293
+      modified: 1747481524556
+      sortKey: -1746379776293
+      description: ""
+    children:
+      - name: 1. Strategy
+        meta:
+          id: fld_654373a246514665bf87d70990ed0f2a
+          created: 1746486831705
+          modified: 1753025724037
+          sortKey: -1751502914726
+          description: ""
+        children:
+          - url: http://localhost:3000
+            name: Strategy
+            meta:
+              id: req_952398a688804967959a4e9acb3e3250
+              created: 1746379782702
+              modified: 1755213757552
+              isPrivate: false
+              description: ""
+              sortKey: -1746486839161
+            method: GET
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.3.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: 2. Observer
+        meta:
+          id: fld_fcccff106a4d431cbd041d16457c5e50
+          created: 1746486851193
+          modified: 1753025726651
+          sortKey: -1751502914676
+          description: ""
+        children:
+          - url: http://localhost:3000/observer/eventA
+            name: Observer Event A
+            meta:
+              id: req_a63586ff4e7f4d2db50b9d04a456435f
+              created: 1746486821323
+              modified: 1746569153733
+              isPrivate: false
+              description: ""
+              sortKey: -1746569149734
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"info": "Erro ao errar"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+          - url: http://localhost:3000/observer/eventB
+            name: Observer Event B
+            meta:
+              id: req_40f892c2ddc84a399340c28a06378338
+              created: 1746486869270
+              modified: 1746569151406
+              isPrivate: false
+              description: ""
+              sortKey: -1746569149634
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"info": "Acerto ao acertar"
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.0.2
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: 3. Builder
+        meta:
+          id: fld_d29c251edaf74c9297c45b5cb20f3855
+          created: 1746569163676
+          modified: 1753025729284
+          sortKey: -1751502914651
+          description: ""
+        children:
+          - url: http://localhost:3000/builder
+            name: Builder
+            meta:
+              id: req_78f50888ef61402faffbfcbb56a2240b
+              created: 1746569174940
+              modified: 1746569190240
+              isPrivate: false
+              description: ""
+              sortKey: -1746569174940
+            method: POST
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: 4. Adapter
+        meta:
+          id: fld_53f29c2292994f0893f576e4876802cc
+          created: 1746659912940
+          modified: 1753025731368
+          sortKey: -1751502914638.5
+          description: ""
+        children:
+          - name: Parser
+            meta:
+              id: fld_69befb86ad5749c7959a38fa4d8b8e3c
+              created: 1746749032844
+              modified: 1746749047243
+              sortKey: -1746749032844
+              description: ""
+            children:
+              - url: http://localhost:3000/parser/providerA
+                name: Adapter ParseA
+                meta:
+                  id: req_1ec8a78afa3e4c36a9bf46ba5455b2c2
+                  created: 1746749041742
+                  modified: 1746749601975
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1746749062475
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: |-
+                    {
+                    	"nome_completo":"Pessoa",
+                    	"contato_email": "email",
+                    	"data_nascimento": "11/10/2000"
+                    }
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                  - name: User-Agent
+                    value: insomnia/11.1.0
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+              - url: http://localhost:3000/parser/providerB
+                name: Adapter ParseB
+                meta:
+                  id: req_761989dc3bf1446683cbc5bfa6165d5b
+                  created: 1746749833098
+                  modified: 1746749950950
+                  isPrivate: false
+                  description: ""
+                  sortKey: -1746704698063.5
+                method: POST
+                body:
+                  mimeType: application/json
+                  text: |-
+                    {
+                    	"fullName":"Pessoa",
+                    	"emailAddress": "email",
+                    	"dob": "11/10/2000"
+                    }
+                headers:
+                  - name: Content-Type
+                    value: application/json
+                  - name: User-Agent
+                    value: insomnia/11.1.0
+                settings:
+                  renderRequestBody: true
+                  encodeUrl: true
+                  followRedirects: global
+                  cookies:
+                    send: true
+                    store: true
+                  rebuildPath: true
+          - url: http://localhost:3000/adapter
+            name: Adapter
+            meta:
+              id: req_c383efc68010466ebc1ba5d6ebc2b57d
+              created: 1746659922191
+              modified: 1746660333698
+              isPrivate: false
+              description: ""
+              sortKey: -1746660333652
+            method: POST
+            headers:
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: 6. Chain Of Responsibility
+        meta:
+          id: fld_c03beaa197ef4088bfc7db9d5a7f366e
+          created: 1747481535293
+          modified: 1753025735314
+          sortKey: -1751502914629.125
+          description: ""
+        children:
+          - url: http://localhost:3000/chain
+            name: Chain
+            meta:
+              id: req_c5264ecf20da4688b9463f5108a235ba
+              created: 1747481544498
+              modified: 1747581196897
+              isPrivate: false
+              description: ""
+              sortKey: -1747481559733
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"conteudo": "Ola",
+                	"cliente": {
+                		"id": "1"
+                	},
+                	"metadados":{
+                		"nome": "Bruno",
+                		"signo": "Leão"
+                	}
+                	
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: 5. Command
+        meta:
+          id: fld_a264f40faed2488a8f1ddf0efa04f115
+          created: 1748031779809
+          modified: 1753025733646
+          sortKey: -1751502914632.25
+          description: ""
+        children:
+          - url: http://localhost:3000/command
+            name: Command
+            meta:
+              id: req_718d9b3e6b374c5d8bcfb52137a0131e
+              created: 1748031798483
+              modified: 1748031833874
+              isPrivate: false
+              description: ""
+              sortKey: -1748031811802
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"conteudo": "Ola",
+                	"cliente": {
+                		"id": "1"
+                	},
+                	"metadados":{
+                		"nome": "Bruno",
+                		"signo": "Leão"
+                	},
+                	"type": "whatsapp"
+                	
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: 7. Facade
+        meta:
+          id: fld_4a5f361ea998492583f235ecbe199dd7
+          created: 1751502914626
+          modified: 1751502914626
+          sortKey: -1751502914626
+          description: ""
+        children:
+          - url: http://localhost:3000/facade
+            name: Facade
+            meta:
+              id: req_ac245e7801ee483f8c8de3f039e3857d
+              created: 1751502923275
+              modified: 1751502946309
+              isPrivate: false
+              description: ""
+              sortKey: -1751502931080
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"conteudo": "Ola",
+                	"cliente": {
+                		"id": "1"
+                	},
+                	"metadados":{
+                		"nome": "Bruno",
+                		"signo": "Leão"
+                	},
+                	"type": "important"
+                	
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: 8. Decorator
+        meta:
+          id: fld_3ffade61b4d548ae9a6cdcbb2ef1b42b
+          created: 1753025747281
+          modified: 1753025747281
+          sortKey: -1749125973735
+          description: ""
+        children:
+          - url: http://localhost:3000/decorator
+            name: Decorator
+            meta:
+              id: req_c93d680c2bdd4673a4f4d82043b745e4
+              created: 1753025747282
+              modified: 1753135678572
+              isPrivate: false
+              description: ""
+              sortKey: -1751502931080
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"conteudo": "Ola",
+                	"cliente": {
+                		"id": "1"
+                	},
+                	"metadados":{
+                		"nome": "Bruno",
+                		"signo": "Leão"
+                	},
+                	"type": "important"
+                	
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+      - name: 9. Template Method
+        meta:
+          id: fld_75d1ed5f801848f49f776f5eb13d486e
+          created: 1753314447585
+          modified: 1753314447585
+          sortKey: -1747937503289.5
+          description: ""
+        children:
+          - url: http://localhost:3000/template
+            name: Template
+            meta:
+              id: req_acca77c0bd654b0e8ae0b4d76bf256df
+              created: 1753314447586
+              modified: 1753314457547
+              isPrivate: false
+              description: ""
+              sortKey: -1751502931080
+            method: POST
+            body:
+              mimeType: application/json
+              text: |-
+                {
+                	"conteudo": "Ola",
+                	"cliente": {
+                		"id": "1"
+                	},
+                	"metadados":{
+                		"nome": "Bruno",
+                		"signo": "Leão"
+                	},
+                	"type": "important"
+                	
+                }
+            headers:
+              - name: Content-Type
+                value: application/json
+              - name: User-Agent
+                value: insomnia/11.1.0
+            settings:
+              renderRequestBody: true
+              encodeUrl: true
+              followRedirects: global
+              cookies:
+                send: true
+                store: true
+              rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_b120324cc4394a7f9c2563a31e2678cc
+    created: 1736210322671
+    modified: 1736210322671
